@@ -12,4 +12,6 @@ Prerequisites:
  - Docker
 
 Run the command: 
-`./vendor/bin/sail up`
+```
+./vendor/bin/sail up
+```
