@@ -6,7 +6,7 @@
 
 `/design` - Any design images and related files
 
-# Running Web Panel
+## Running the Web Panel
 Prerequisites:
  - Composer 2
  - Docker
