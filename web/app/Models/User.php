@@ -40,4 +40,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function rewards() {
+        return $this->hasMany(QuestReward::class, 'user_id');
+    }
+
+    public function points() {
+        $points = 0;
+        foreach($this->rewards as $reward)
+            $points += $reward->points;
+        return $points;
+    }
 }

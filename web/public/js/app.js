@@ -7059,6 +7059,101 @@ exports.default = ResponsiveNavLink;
 
 /***/ }),
 
+/***/ "./resources/js/Components/ShoppingList.tsx":
+/*!**************************************************!*\
+  !*** ./resources/js/Components/ShoppingList.tsx ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var initialItems = [{
+  id: 1,
+  order: 1,
+  name: "Chicken Breasts"
+}, {
+  id: 2,
+  order: 2,
+  name: "Cheddar Cheese"
+}, {
+  id: 3,
+  order: 3,
+  name: "Canned Tomatoes"
+}];
+
+var ShoppingList = function ShoppingList() {
+  var _a = react_1.useState(initialItems),
+      items = _a[0],
+      setItems = _a[1];
+
+  return react_1["default"].createElement("div", {
+    className: "bg-white px-4 py-8 rounded-xl shadow-xl flex flex-col justify-between mx-4 items-center gap-4",
+    style: {
+      height: "572px"
+    }
+  }, react_1["default"].createElement("div", {
+    className: "w-full grid place-items-center gap-4"
+  }, react_1["default"].createElement("h1", {
+    className: "text-2xl font-semibold pb-4 border-b border-gray-300 w-full text-center"
+  }, "Shopping List"), react_1["default"].createElement("ul", {
+    className: "grid gap-2"
+  }, items.map(function (item) {
+    return react_1["default"].createElement("li", {
+      key: item.id,
+      className: "w-full flex gap-2"
+    }, react_1["default"].createElement("div", {
+      className: "rounded-full bg-red-400 font-semibold text-white w-6 text-center text-sm"
+    }, item.order), react_1["default"].createElement("p", null, item.name));
+  }))), react_1["default"].createElement("button", {
+    className: "bg-gradient-to-b from-green-400 to-green-500 rounded-xl text-white py-3 w-full"
+  }, "+ Add More Items"));
+};
+
+exports.default = ShoppingList;
+
+/***/ }),
+
 /***/ "./resources/js/Components/ValidationErrors.tsx":
 /*!******************************************************!*\
   !*** ./resources/js/Components/ValidationErrors.tsx ***!
@@ -8092,6 +8187,8 @@ var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/r
 
 var Authenticated_1 = __importDefault(__webpack_require__(/*! @/Layouts/Authenticated */ "./resources/js/Layouts/Authenticated.tsx"));
 
+var ShoppingList_1 = __importDefault(__webpack_require__(/*! @/Components/ShoppingList */ "./resources/js/Components/ShoppingList.tsx"));
+
 function Dashboard(props) {
   return react_1["default"].createElement(Authenticated_1["default"], {
     auth: props.auth,
@@ -8102,11 +8199,7 @@ function Dashboard(props) {
     className: "py-12"
   }, react_1["default"].createElement("div", {
     className: "max-w-7xl mx-auto sm:px-6 lg:px-8"
-  }, react_1["default"].createElement("div", {
-    className: "bg-white overflow-hidden shadow-sm sm:rounded-lg"
-  }, react_1["default"].createElement("div", {
-    className: "p-6 bg-white border-b border-gray-200"
-  }, "You're logged in!")))));
+  }, react_1["default"].createElement(ShoppingList_1["default"], null))));
 }
 
 exports.default = Dashboard;
