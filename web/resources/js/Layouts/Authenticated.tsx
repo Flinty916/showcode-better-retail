@@ -1,9 +1,7 @@
-import ApplicationLogo from '../Components/ApplicationLogo';
 import Dropdown from '../Components/Dropdown';
 import NavLink from '../Components/NavLink';
 import React, { useState } from 'react';
 import ResponsiveNavLink from '../Components/ResponsiveNavLink';
-import { InertiaLink } from '@inertiajs/inertia-react';
 import route from 'ziggy-js';
 
 interface Props {
@@ -22,9 +20,6 @@ export default function Authenticated({ auth, header, children }: Props) {
                     <div className="flex justify-between h-16">
                         <div className="flex">
                             <div className="flex-shrink-0 flex items-center">
-                                <InertiaLink href="/">
-                                    <ApplicationLogo className="block h-9 w-auto text-gray-500" />
-                                </InertiaLink>
                             </div>
 
                             <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
