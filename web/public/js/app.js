@@ -7289,9 +7289,15 @@ function Authenticated(_a) {
   }))), react_1["default"].createElement("div", {
     className: "hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"
   }, react_1["default"].createElement(NavLink_1["default"], {
-    href: ziggy_js_1["default"]('dashboard'),
-    active: ziggy_js_1["default"]().current('dashboard')
-  }, "Dashboard"))), react_1["default"].createElement("div", {
+    href: ziggy_js_1["default"]("dashboard"),
+    active: ziggy_js_1["default"]().current("dashboard")
+  }, "Dashboard"), react_1["default"].createElement(NavLink_1["default"], {
+    href: ziggy_js_1["default"]("search"),
+    active: ziggy_js_1["default"]().current("search")
+  }, "Search"), react_1["default"].createElement(NavLink_1["default"], {
+    href: ziggy_js_1["default"]("profile"),
+    active: ziggy_js_1["default"]().current("profile")
+  }, "Profile"))), react_1["default"].createElement("div", {
     className: "hidden sm:flex sm:items-center sm:ml-6"
   }, react_1["default"].createElement("div", {
     className: "ml-3 relative"
@@ -7310,7 +7316,7 @@ function Authenticated(_a) {
     d: "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z",
     clipRule: "evenodd"
   }))))), react_1["default"].createElement(Dropdown_1["default"].Content, null, react_1["default"].createElement(Dropdown_1["default"].Link, {
-    href: ziggy_js_1["default"]('logout'),
+    href: ziggy_js_1["default"]("logout"),
     method: "post",
     as: "button"
   }, "Log Out"))))), react_1["default"].createElement("div", {
@@ -7328,25 +7334,25 @@ function Authenticated(_a) {
     fill: "none",
     viewBox: "0 0 24 24"
   }, react_1["default"].createElement("path", {
-    className: !showingNavigationDropdown ? 'inline-flex' : 'hidden',
+    className: !showingNavigationDropdown ? "inline-flex" : "hidden",
     strokeLinecap: "round",
     strokeLinejoin: "round",
     strokeWidth: "2",
     d: "M4 6h16M4 12h16M4 18h16"
   }), react_1["default"].createElement("path", {
-    className: showingNavigationDropdown ? 'inline-flex' : 'hidden',
+    className: showingNavigationDropdown ? "inline-flex" : "hidden",
     strokeLinecap: "round",
     strokeLinejoin: "round",
     strokeWidth: "2",
     d: "M6 18L18 6M6 6l12 12"
   })))))), react_1["default"].createElement("div", {
-    className: (showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden'
+    className: (showingNavigationDropdown ? "block" : "hidden") + " sm:hidden"
   }, react_1["default"].createElement("div", {
     className: "pt-2 pb-3 space-y-1"
   }, react_1["default"].createElement(ResponsiveNavLink_1["default"], {
     method: "post",
-    href: ziggy_js_1["default"]('dashboard'),
-    active: ziggy_js_1["default"]().current('dashboard')
+    href: ziggy_js_1["default"]("dashboard"),
+    active: ziggy_js_1["default"]().current("dashboard")
   }, "Dashboard")), react_1["default"].createElement("div", {
     className: "pt-4 pb-1 border-t border-gray-200"
   }, react_1["default"].createElement("div", {
@@ -7359,7 +7365,7 @@ function Authenticated(_a) {
     className: "mt-3 space-y-1"
   }, react_1["default"].createElement(ResponsiveNavLink_1["default"], {
     method: "post",
-    href: ziggy_js_1["default"]('logout'),
+    href: ziggy_js_1["default"]("logout"),
     as: "button"
   }, "Log Out"))))), header && react_1["default"].createElement("header", {
     className: "bg-white shadow"
