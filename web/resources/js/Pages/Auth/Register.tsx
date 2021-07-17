@@ -33,7 +33,7 @@ export default function Register() {
     };
 
     return (
-        <Guest>
+        <Guest previousRoute="welcome">
             <ValidationErrors errors={errors} />
 
             <form onSubmit={submit}>

@@ -1,22 +1,24 @@
-import ApplicationLogo from '../Components/ApplicationLogo';
 import React from 'react';
-import { InertiaLink } from '@inertiajs/inertia-react';
+import {BackButton} from '@/Components/BackButton';
+import CSS from "csstype"
 
 interface Props {
     children: React.ReactNode;
+    previousRoute?: string | undefined;
 }
 
-export default function Guest({ children }: Props) {
-    return (
-        <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <InertiaLink href="/">
-                    <ApplicationLogo className="w-20 h-20 fill-current text-gray-500" />
-                </InertiaLink>
-            </div>
+export default function Guest({ children, previousRoute }: Props) {
+    const backgroundStyle: CSS.Properties = {
+        background: "linear-gradient(0deg, #3f4e9b40, white)"
+    }
 
-            <div className="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {children}
+    return (
+        <div className="pt-6 sm:pt-0" style={backgroundStyle}>
+            <BackButton previousRoute={previousRoute} />
+            <div className="min-h-screen flex flex-col sm:justify-center items-center ">
+                <div className="w-full sm:max-w-md mt-6 px-6 py-4 overflow-hidden sm:rounded-lg">
+                    {children}
+                </div>
             </div>
         </div>
     );
