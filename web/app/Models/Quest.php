@@ -23,7 +23,10 @@ class Quest extends Model
     public function make() {
         $find = $this->getRandom($this->node->items, $this->item);
         $points = rand(50, 100);
-        return "Go look for " . $find->name . " for " . $points . " points!";
+        return collect([
+            "quest" => "Go look for " . $this->item->name . " for " . $points . " points!",
+            "hint" => "It's near " . $find->name . "...",
+        ]);
     }
 
     public function getRandom(Collection $items, NodeItem $item) {
@@ -32,5 +35,12 @@ class Quest extends Model
             return $random;
         else
             return $this->getRandom($items, $item);
+    }
+
+    public function complete(User $user) {
+        return QuestReward::create([
+            'points' => $this->points,
+            'user_id' => $user->id,
+        ]);
     }
 }

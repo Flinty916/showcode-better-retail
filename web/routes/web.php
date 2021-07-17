@@ -16,8 +16,8 @@ use App\Http\Controllers\Auth\SocialiteController;
 |
 */
 
-Route::get('login/{provider}', [SocialiteController::class, '']);
-Route::get('login/{provider}/callback',[SocialiteController::class, '']);
+Route::get('login/{provider}', [SocialiteController::class, 'redirect']);
+Route::get('login/{provider}/callback',[SocialiteController::class, 'callback']);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
