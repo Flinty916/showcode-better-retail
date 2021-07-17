@@ -1,0 +1,55 @@
+[
+    {
+        "name": "Sugar and Spice",
+        "challenge": "Buy $ and $ in a single shopping trip!",
+        "point_value": 50
+    },
+
+    {
+        "name": "Penny Pincher",
+        "challenge": "Spend less than $ over 3 consecutive shopping trips!",
+        "point_value": 150
+    },
+
+    {
+        "name": "Splash your Cash",
+        "challenge": "Spend more than $ next time you shop!",
+        "point_value": 100
+    },
+
+    {
+        "name": "Adventurer",
+        "challenge": "Buy something from the $ aisle!",
+        "point_value": 25
+    },
+
+    {
+        "name": "Cheapskate",
+        "challenge": "Go on a shopping trip without buying anything!",
+        "point_value": 25
+    },
+
+    {
+        "name": "Big Spender",
+        "challenge": "Spend a total of $!",
+        "point_value": 200
+    },
+
+    {
+        "name": "Fashion Expert",
+        "challenge": "Customise your avatar!",
+        "point_value": 25
+    },
+
+    {
+        "name": "Registered Shopper",
+        "challenge": "Create an account!",
+        "point_value": 100
+    },
+
+    {
+        "name": "Double Bill",
+        "challenge": "Buy multiple of the same item!",
+        "point_value": 75
+    }
+]
