@@ -6939,6 +6939,45 @@ exports.default = Input;
 
 /***/ }),
 
+/***/ "./resources/js/Components/Journey.tsx":
+/*!*********************************************!*\
+  !*** ./resources/js/Components/Journey.tsx ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var Journey = function Journey() {
+  var map = Array(10).fill(Array(10).fill("O"));
+  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("img", {
+    src: "images/map.png",
+    alt: "map"
+  }), map.map(function (column, x) {
+    return react_1["default"].createElement("div", {
+      className: "flex"
+    }, column.map(function (grid, y) {
+      return react_1["default"].createElement("div", null, grid);
+    }));
+  }));
+};
+
+exports.default = Journey;
+
+/***/ }),
+
 /***/ "./resources/js/Components/Label.tsx":
 /*!*******************************************!*\
   !*** ./resources/js/Components/Label.tsx ***!
@@ -8277,7 +8316,7 @@ var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/r
 
 var Authenticated_1 = __importDefault(__webpack_require__(/*! @/Layouts/Authenticated */ "./resources/js/Layouts/Authenticated.tsx"));
 
-var ShoppingList_1 = __importDefault(__webpack_require__(/*! @/Components/ShoppingList */ "./resources/js/Components/ShoppingList.tsx"));
+var Journey_1 = __importDefault(__webpack_require__(/*! @/Components/Journey */ "./resources/js/Components/Journey.tsx"));
 
 function Search(props) {
   return react_1["default"].createElement(Authenticated_1["default"], {
@@ -8289,7 +8328,7 @@ function Search(props) {
     className: "py-12"
   }, react_1["default"].createElement("div", {
     className: "max-w-7xl mx-auto sm:px-6 lg:px-8"
-  }, react_1["default"].createElement(ShoppingList_1["default"], null))));
+  }, react_1["default"].createElement(Journey_1["default"], null))));
 }
 
 exports.default = Search;
