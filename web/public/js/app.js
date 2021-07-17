@@ -7068,32 +7068,86 @@ exports.default = ResponsiveNavLink;
 "use strict";
 
 
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
 };
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var items = [{
-  id: 0,
+var initialItems = [{
+  id: 1,
   order: 1,
   name: "Chicken Breasts"
+}, {
+  id: 2,
+  order: 2,
+  name: "Cheddar Cheese"
+}, {
+  id: 3,
+  order: 3,
+  name: "Canned Tomatoes"
 }];
 
 var ShoppingList = function ShoppingList() {
+  var _a = react_1.useState(initialItems),
+      items = _a[0],
+      setItems = _a[1];
+
   return react_1["default"].createElement("div", {
-    className: "bg-white p-4 rounded shadow grid place-items-center"
-  }, react_1["default"].createElement("h1", null, "Shopping List"), react_1["default"].createElement("ul", null, items.map(function (item) {
-    return react_1["default"].createElement("li", null, item.order, ": ", item.name);
-  })), react_1["default"].createElement("button", {
-    className: "bg-green-500 rounded-full font-bold text-white py-2 px-3"
-  }, "Add More Items"));
+    className: "bg-white px-4 py-8 rounded-xl shadow-xl flex flex-col justify-between mx-4 items-center gap-4",
+    style: {
+      height: "572px"
+    }
+  }, react_1["default"].createElement("div", {
+    className: "w-full grid place-items-center gap-4"
+  }, react_1["default"].createElement("h1", {
+    className: "text-2xl font-semibold pb-4 border-b border-gray-300 w-full text-center"
+  }, "Shopping List"), react_1["default"].createElement("ul", {
+    className: "grid gap-2"
+  }, items.map(function (item) {
+    return react_1["default"].createElement("li", {
+      key: item.id,
+      className: "w-full flex gap-2"
+    }, react_1["default"].createElement("div", {
+      className: "rounded-full bg-red-400 font-semibold text-white w-6 text-center text-sm"
+    }, item.order), react_1["default"].createElement("p", null, item.name));
+  }))), react_1["default"].createElement("button", {
+    className: "bg-gradient-to-b from-green-400 to-green-500 rounded-xl text-white py-3 w-full"
+  }, "+ Add More Items"));
 };
 
 exports.default = ShoppingList;
