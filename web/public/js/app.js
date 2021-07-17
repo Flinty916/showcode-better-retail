@@ -8206,6 +8206,90 @@ exports.default = Dashboard;
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Profile.tsx":
+/*!****************************************!*\
+  !*** ./resources/js/Pages/Profile.tsx ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var Authenticated_1 = __importDefault(__webpack_require__(/*! @/Layouts/Authenticated */ "./resources/js/Layouts/Authenticated.tsx"));
+
+var ShoppingList_1 = __importDefault(__webpack_require__(/*! @/Components/ShoppingList */ "./resources/js/Components/ShoppingList.tsx"));
+
+function Profile(props) {
+  return react_1["default"].createElement(Authenticated_1["default"], {
+    auth: props.auth,
+    header: react_1["default"].createElement("h2", {
+      className: "font-semibold text-xl text-gray-800 leading-tight"
+    }, "Profile")
+  }, react_1["default"].createElement("div", {
+    className: "py-12"
+  }, react_1["default"].createElement("div", {
+    className: "max-w-7xl mx-auto sm:px-6 lg:px-8"
+  }, react_1["default"].createElement(ShoppingList_1["default"], null))));
+}
+
+exports.default = Profile;
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Search.tsx":
+/*!***************************************!*\
+  !*** ./resources/js/Pages/Search.tsx ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var Authenticated_1 = __importDefault(__webpack_require__(/*! @/Layouts/Authenticated */ "./resources/js/Layouts/Authenticated.tsx"));
+
+var ShoppingList_1 = __importDefault(__webpack_require__(/*! @/Components/ShoppingList */ "./resources/js/Components/ShoppingList.tsx"));
+
+function Search(props) {
+  return react_1["default"].createElement(Authenticated_1["default"], {
+    auth: props.auth,
+    header: react_1["default"].createElement("h2", {
+      className: "font-semibold text-xl text-gray-800 leading-tight"
+    }, "Search")
+  }, react_1["default"].createElement("div", {
+    className: "py-12"
+  }, react_1["default"].createElement("div", {
+    className: "max-w-7xl mx-auto sm:px-6 lg:px-8"
+  }, react_1["default"].createElement(ShoppingList_1["default"], null))));
+}
+
+exports.default = Search;
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Welcome.tsx":
 /*!****************************************!*\
   !*** ./resources/js/Pages/Welcome.tsx ***!
@@ -59742,6 +59826,10 @@ var map = {
 	"./Auth/VerifyEmail.tsx": "./resources/js/Pages/Auth/VerifyEmail.tsx",
 	"./Dashboard": "./resources/js/Pages/Dashboard.tsx",
 	"./Dashboard.tsx": "./resources/js/Pages/Dashboard.tsx",
+	"./Profile": "./resources/js/Pages/Profile.tsx",
+	"./Profile.tsx": "./resources/js/Pages/Profile.tsx",
+	"./Search": "./resources/js/Pages/Search.tsx",
+	"./Search.tsx": "./resources/js/Pages/Search.tsx",
 	"./Welcome": "./resources/js/Pages/Welcome.tsx",
 	"./Welcome.tsx": "./resources/js/Pages/Welcome.tsx"
 };
