@@ -30,6 +30,7 @@ class CreateNodeRequest extends FormRequest
             'coordY' => 'required|integer',
             'sizeX' => 'required|integer',
             'sizeY' => 'required|integer',
+            'shop_id' => 'required|integer'
         ];
     }
 }

@@ -112,6 +112,12 @@
       <path value="$PROJECT_DIR$/web/vendor/tightenco/ziggy" />
       <path value="$PROJECT_DIR$/web/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/web/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/web/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/web/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/event-manager" />
     </include_path>
   </component>
 </project>

@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\Auth\SocialiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,9 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('login/{provider}', [SocialiteController::class, 'redirect']);
+Route::get('login/{provider}/callback',[SocialiteController::class, 'callback']);
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -24,8 +28,19 @@ Route::get('/', function () {
     ]);
 })->name("welcome");
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
+
+    Route::get('/search', function () {
+        return Inertia::render('Search');
+    })->name('search');
+
+    Route::get('/profile', function () {
+        return Inertia::render('Profile');
+    })->name('profile');
+});
+
+require __DIR__ . '/auth.php';

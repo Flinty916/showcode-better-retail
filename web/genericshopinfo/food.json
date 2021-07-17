@@ -1,0 +1,170 @@
+[
+    {
+        "name": "Apple",
+        "price": 1.6,
+        "aisle": "Fresh Food"
+    },
+    {
+        "name": "Boneless Salmon",
+        "price": 3.5,
+        "aisle": "Fresh Food"
+    },
+    {
+        "name": "Chicken Breast Portions",
+        "price": 3.5,
+        "aisle": "Fresh Food"
+    },
+
+
+    {
+        "name": "Chocolate Mini Rolls",
+        "price": 2.9,
+        "aisle": "Bakery"
+    },
+    {
+        "name": "Plain Bagels",
+        "price": 1.6,
+        "aisle": "Bakery"
+    },
+    {
+        "name": "Seeded Burger Buns",
+        "price": 0.7,
+        "aisle": "Bakery"
+    },
+
+
+    {
+        "name": "Chocolate Pop Lolly",
+        "price": 3.99,
+        "aisle": "Frozen Food"
+    },
+    {
+        "name": "Extra Chunky Chips",
+        "price": 2.5,
+        "aisle": "Frozen Food"
+    },
+    {
+        "name": "Frozen Blueberries",
+        "price": 2,
+        "aisle": "Frozen Food"
+    },
+
+
+    {
+        "name": "Jaffa Cakes",
+        "price": 2,
+        "aisle": "Food Cupboard"
+    },
+    {
+        "name": "Self Raising Flour",
+        "price": 1.65,
+        "aisle": "Food Cupboard"
+    },
+    {
+        "name": "Tinned Coconut Milk",
+        "price": 1,
+        "aisle": "Food Cupboard"
+    },
+
+
+    {
+        "name": "Diet Coke",
+        "price": 8,
+        "aisle": "Drinks"
+    },
+    {
+        "name": "Tonic Water",
+        "price": 1.5,
+        "aisle": "Drinks"
+    },
+    {
+        "name": "Tea Bags",
+        "price": 2.49,
+        "aisle": "Drinks"
+    },
+
+
+    {
+        "name": "First Milk",
+        "price": 11.35,
+        "aisle": "Baby"
+    },
+    {
+        "name": "Antibacterial Surface Wipes",
+        "price": 2,
+        "aisle": "Baby"
+    },
+    {
+        "name": "Baby Powder",
+        "price": 2,
+        "aisle": "Baby"
+    },
+
+
+    {
+        "name": "Toothpaste",
+        "price": 1.99,
+        "aisle": "Health & Beauty"
+    },
+    {
+        "name": "Shower Gel",
+        "price": 1,
+        "aisle": "Health & Beauty"
+    },
+    {
+        "name": "Antiperspirant Deodrant",
+        "price": 1.46,
+        "aisle": "Health & Beauty"
+    },
+
+
+    {
+        "name": "Cat Litter",
+        "price": 12,
+        "aisle": "Pets"
+    },
+    {
+        "name": "Dental Sticks",
+        "price": 3.15,
+        "aisle": "Pets"
+    },
+    {
+        "name": "Dog Poop Bags",
+        "price": 1.65,
+        "aisle": "Pets"
+    },
+
+
+    {
+        "name": "Toilet Roll",
+        "price": 9.75,
+        "aisle": "Household"
+    },
+    {
+        "name": "Kitchen Roll",
+        "price": 3.75,
+        "aisle": "Household"
+    },
+    {
+        "name": "Bin Bags",
+        "price": 2.2,
+        "aisle": "Household"
+    },
+
+
+    {
+        "name": "AA Batteries",
+        "price": 4,
+        "aisle": "Home & Ents"
+    },
+    {
+        "name": "Pack of Cigarettes",
+        "price": 9.5,
+        "aisle": "Home & Ents"
+    },
+    {
+        "name": "Magazine",
+        "price": 0.75,
+        "aisle": "Home & Ents"
+    }
+]

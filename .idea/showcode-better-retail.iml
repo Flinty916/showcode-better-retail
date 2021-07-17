@@ -11,6 +11,10 @@
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/lexer" />
@@ -33,10 +37,12 @@
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/laravel/sail" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/laravel/socialite" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/league/oauth1-client" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/myclabs/deep-copy" />

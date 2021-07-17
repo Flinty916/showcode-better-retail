@@ -30,6 +30,7 @@ class UpdateNodeRequest extends FormRequest
             'coordY' => 'nullable|integer',
             'sizeX' => 'nullable|integer',
             'sizeY' => 'nullable|integer',
+            'shop_id' => 'nullable|integer'
         ];
     }
 }
