@@ -18,4 +18,8 @@ class Shop extends Model
     public function type() {
         return $this->belongsTo(ShopType::class, 'type_id');
     }
+
+    public function nodes() {
+        return $this->hasMany(Node::class, 'shop_id');
+    }
 }

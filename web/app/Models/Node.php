@@ -14,4 +14,8 @@ class Node extends Model
     public function items() {
         return $this->hasMany(NodeItem::class, 'node_id');
     }
+
+    public function shop() {
+        return $this->belongsTo(Shop::class, 'shop_id');
+    }
 }
