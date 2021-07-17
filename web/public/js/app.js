@@ -7059,6 +7059,47 @@ exports.default = ResponsiveNavLink;
 
 /***/ }),
 
+/***/ "./resources/js/Components/ShoppingList.tsx":
+/*!**************************************************!*\
+  !*** ./resources/js/Components/ShoppingList.tsx ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var items = [{
+  id: 0,
+  order: 1,
+  name: "Chicken Breasts"
+}];
+
+var ShoppingList = function ShoppingList() {
+  return react_1["default"].createElement("div", {
+    className: "bg-white p-4 rounded shadow grid place-items-center"
+  }, react_1["default"].createElement("h1", null, "Shopping List"), react_1["default"].createElement("ul", null, items.map(function (item) {
+    return react_1["default"].createElement("li", null, item.order, ": ", item.name);
+  })), react_1["default"].createElement("button", {
+    className: "bg-green-500 rounded-full font-bold text-white py-2 px-3"
+  }, "Add More Items"));
+};
+
+exports.default = ShoppingList;
+
+/***/ }),
+
 /***/ "./resources/js/Components/ValidationErrors.tsx":
 /*!******************************************************!*\
   !*** ./resources/js/Components/ValidationErrors.tsx ***!
@@ -8092,6 +8133,8 @@ var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/r
 
 var Authenticated_1 = __importDefault(__webpack_require__(/*! @/Layouts/Authenticated */ "./resources/js/Layouts/Authenticated.tsx"));
 
+var ShoppingList_1 = __importDefault(__webpack_require__(/*! @/Components/ShoppingList */ "./resources/js/Components/ShoppingList.tsx"));
+
 function Dashboard(props) {
   return react_1["default"].createElement(Authenticated_1["default"], {
     auth: props.auth,
@@ -8102,11 +8145,7 @@ function Dashboard(props) {
     className: "py-12"
   }, react_1["default"].createElement("div", {
     className: "max-w-7xl mx-auto sm:px-6 lg:px-8"
-  }, react_1["default"].createElement("div", {
-    className: "bg-white overflow-hidden shadow-sm sm:rounded-lg"
-  }, react_1["default"].createElement("div", {
-    className: "p-6 bg-white border-b border-gray-200"
-  }, "You're logged in!")))));
+  }, react_1["default"].createElement(ShoppingList_1["default"], null))));
 }
 
 exports.default = Dashboard;
