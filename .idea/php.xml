@@ -107,6 +107,11 @@
       <path value="$PROJECT_DIR$/web/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/web/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/web/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/web/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/web/vendor/inertiajs/inertia-laravel" />
+      <path value="$PROJECT_DIR$/web/vendor/tightenco/ziggy" />
+      <path value="$PROJECT_DIR$/web/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/web/vendor/nesbot/carbon" />
     </include_path>
   </component>
 </project>
