@@ -1,6 +1,7 @@
 import React from "react";
 import Authenticated from "@/Layouts/Authenticated";
 import ShoppingList from "@/Components/ShoppingList";
+import Journey from "@/Components/Journey";
 
 export default function Search(props: React.PropsWithChildren<any>) {
     return (
@@ -14,7 +15,8 @@ export default function Search(props: React.PropsWithChildren<any>) {
         >
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <ShoppingList />
+                    {/* <ShoppingList /> */}
+                    <Journey />
                 </div>
             </div>
         </Authenticated>
