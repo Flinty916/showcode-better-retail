@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\Auth\SocialiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,9 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('login/{provider}', [SocialiteController::class, '']);
+Route::get('login/{provider}/callback',[SocialiteController::class, '']);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [

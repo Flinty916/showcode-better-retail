@@ -112,6 +112,8 @@
       <path value="$PROJECT_DIR$/web/vendor/tightenco/ziggy" />
       <path value="$PROJECT_DIR$/web/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/web/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/web/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/web/vendor/league/oauth1-client" />
     </include_path>
   </component>
 </project>
