@@ -48,7 +48,7 @@ Route::middleware('auth')->group(function () {
 
 
 Route::name('data.')->prefix('data')->group(function () {
-    Route::name('shop.')->prefix('shop/{shop}')->group(function () {
+    Route::name('shop.')->prefix('/shop')->group(function () {
         Route::prefix('/{shop}')->group(function() {
             Route::name('node.')->prefix('node')->group(function () {
                 Route::get('/', [NodeController::class, 'all'])->name('all');
