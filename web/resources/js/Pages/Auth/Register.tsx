@@ -7,6 +7,9 @@ import ValidationErrors from '@/Components/ValidationErrors';
 import { InertiaLink } from '@inertiajs/inertia-react';
 import { useForm } from '@inertiajs/inertia-react';
 import route from 'ziggy-js';
+import {ScreenTitle} from "@/Components/ScreenTitle";
+import {SocialButtons} from "@/Components/SocialButtons";
+import {EmailPasswordForm} from "@/Components/EmailPasswordForm";
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -36,72 +39,11 @@ export default function Register() {
         <Guest previousRoute="welcome">
             <ValidationErrors errors={errors} />
 
-            <form onSubmit={submit}>
-                <div>
-                    <Label forInput="name" value="Name" />
+            <ScreenTitle titleName="Create Account" />
+            <SocialButtons />
 
-                    <Input
-                        type="text"
-                        name="name"
-                        value={data.name}
-                        className="mt-1 block w-full"
-                        autoComplete="name"
-                        isFocused={true}
-                        handleChange={onHandleChange}
-                        required
-                    />
-                </div>
-
-                <div className="mt-4">
-                    <Label forInput="email" value="Email" />
-
-                    <Input
-                        type="email"
-                        name="email"
-                        value={data.email}
-                        className="mt-1 block w-full"
-                        autoComplete="username"
-                        handleChange={onHandleChange}
-                        required
-                    />
-                </div>
-
-                <div className="mt-4">
-                    <Label forInput="password" value="Password" />
-
-                    <Input
-                        type="password"
-                        name="password"
-                        value={data.password}
-                        className="mt-1 block w-full"
-                        autoComplete="new-password"
-                        handleChange={onHandleChange}
-                        required
-                    />
-                </div>
-
-                <div className="mt-4">
-                    <Label forInput="password_confirmation" value="Confirm Password" />
-
-                    <Input
-                        type="password"
-                        name="password_confirmation"
-                        value={data.password_confirmation}
-                        className="mt-1 block w-full"
-                        handleChange={onHandleChange}
-                        required
-                    />
-                </div>
-
-                <div className="flex items-center justify-end mt-4">
-                    <InertiaLink href={route('login')} className="underline text-sm text-gray-600 hover:text-gray-900">
-                        Already registered?
-                    </InertiaLink>
-
-                    <Button className="ml-4" processing={processing}>
-                        Register
-                    </Button>
-                </div>
+            <form style={{paddingTop: "25px"}} onSubmit={submit}>
+                <EmailPasswordForm data={data} onHandleChange={onHandleChange} canResetPassword={false} processing={processing} buttonText="Done"/>
             </form>
         </Guest>
     );

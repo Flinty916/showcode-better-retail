@@ -23,18 +23,28 @@ export const SocialButtons: FC = () => {
         marginRight: "auto"
     }
 
+    const fb = () => {
+        location.href = '/login/facebook'
+    }
+
     return (
         <div style={{paddingTop: "25px"}} className="flex flex-row justify-center">
             <button style={buttonStyles}>
-                <img src={Google} style={imageStyles} alt="Google" />
+                <a href="/login/google/callback">
+                    <img src={Google} style={imageStyles} alt="Google"/>
+                </a>
             </button>
 
             <button style={buttonStyles}>
-                <img src={Facebook} style={imageStyles} alt="Facebook" />
+                <a href="/login/facebook/callback">
+                    <img src={Facebook} style={imageStyles} alt="Facebook"/>
+                </a>
             </button>
 
             <button style={buttonStyles}>
-                <img src={Apple} style={imageStyles} alt="Apple" />
+                <a href="/login/apple/callback">
+                    <img src={Apple} style={imageStyles} alt="Apple"/>
+                </a>
             </button>
         </div>
     );

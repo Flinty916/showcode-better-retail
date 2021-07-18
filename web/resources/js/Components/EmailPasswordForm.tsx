@@ -45,6 +45,17 @@ export const EmailPasswordForm: FC<Props> = (props) => {
         paddingTop: "25px"
     }
 
+    const tAndC: CSS.Properties = {
+        paddingTop: "25px",
+        textAlign: "center",
+        fontFamily: "Inter",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontSize: "17px",
+        lineHeight: "25px",
+        color: "#A7A7A7"
+    }
+
     return (
         <div>
             <div>
@@ -86,6 +97,12 @@ export const EmailPasswordForm: FC<Props> = (props) => {
                         </InertiaLink>
                     )}
                 </div>
+            </div>
+
+            <div className="flex items-center justify-center mt-4" style={tAndC}>
+                {!props.canResetPassword && (
+                    <p>Creating an account means that you are okay with our Terms of Service and Privacy Policy.</p>
+                )}
             </div>
 
             <div className="flex items-center justify-end mt-4" style={spacing}>

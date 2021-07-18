@@ -4,7 +4,7 @@ import ShoppingList from "@/Components/ShoppingList";
 
 export default function Dashboard(props: React.PropsWithChildren<any>) {
     return (
-        <Authenticated
+        <Authenticated isManager={props.isManager}
             auth={props.auth}
             header={
                 <h2 className="font-semibold text-xl text-gray-800 leading-tight">
