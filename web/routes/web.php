@@ -76,6 +76,8 @@ Route::name('data.')->prefix('data')->group(function () {
             });
             Route::name('search.')->prefix('search')->group(function() {
                 Route::post('/', [SearchController::class, 'search'])->name('search');
+                Route::get('/collections', [SearchController::class, 'collections4'])->name('collections');
+                Route::get('/items', [SearchController::class, 'random6'])->name('items');
             });
         });
     });
