@@ -6,7 +6,7 @@ import Journey from "@/Components/Journey";
 
 export default function Search(props: React.PropsWithChildren<any>) {
     const onHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        Axios.post("{{ route('data.shop.search.search', 1) }}", {query: event.target.value});
+        Axios.post("http://localhost/data/shop/1/search", {query: event.target.value});
     };
 
     return (
@@ -23,7 +23,7 @@ export default function Search(props: React.PropsWithChildren<any>) {
                     >
                         Search for items
                     </label>
-                    <input className="rounded-lg py-2 shadow-lg" name="items" />
+                    <input className="rounded-lg py-2 shadow-lg" name="items" onChange={(e) => onHandleChange(e)}/>
                 </header>
 
                 <main className="bg-white rounded-2xl h-full">
