@@ -9,6 +9,10 @@ use App\Http\Controllers\Auth\SocialiteController;
 use App\Http\Controllers\NodeController;
 use App\Http\Controllers\NodeItemController;
 use App\Http\Controllers\NodeItemCollectionController;
+
+header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token, Authorization, Accept,charset,boundary,Content-Length');
+header('Access-Control-Allow-Origin: *');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
