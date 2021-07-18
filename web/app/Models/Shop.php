@@ -22,4 +22,16 @@ class Shop extends Model
     public function nodes() {
         return $this->hasMany(Node::class, 'shop_id');
     }
+
+    public function items() {
+        $items = [];
+        foreach($this->nodes as $node)
+            foreach($node->items as $item)
+                $items[$item->id] = $item;
+        return collect($items);
+    }
+
+    public function nodeCollections() {
+        return $this->hasMany(NodeItemCollection::class, 'shop_id');
+    }
 }

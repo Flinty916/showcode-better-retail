@@ -15,8 +15,8 @@ class AlterUsersAddProviders extends Migration
     {
         Schema::table('users', function(Blueprint $table) {
             $table->string('password')->nullable()->change();
-            $table->string('provider');
-            $table->string('provider_id');
+            $table->string('provider')->nullable();
+            $table->string('provider_id')->nullable();
         });
     }
 
