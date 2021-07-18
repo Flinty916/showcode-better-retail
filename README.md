@@ -11,7 +11,10 @@ Prerequisites:
  - Composer 2
  - Docker
 
-Run the command: 
+Run the commands: 
+```
+composer update && npm install && npm build dev
+```
 ```
 ./vendor/bin/sail up
 ```
