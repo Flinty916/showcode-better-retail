@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    public function search(Shop $shop, $query) {
+    public function search(Shop $shop, Request $request) {
         $items = [];
+        $query = $request->input('query');
         foreach ($shop->items() as $item)
             if(stripos($item->name, $query))
                 $items[$item->id] = $item;

@@ -60,7 +60,7 @@ Route::middleware('auth')->group(function () {
 
 
 Route::name('data.')->prefix('data')->group(function () {
-    Route::name('shop.')->prefix('shop/{shop}')->group(function () {
+    Route::name('shop.')->prefix('/shop')->group(function () {
         Route::prefix('/{shop}')->group(function() {
             Route::name('node.')->prefix('node')->group(function () {
                 Route::get('/', [NodeController::class, 'all'])->name('all');
@@ -88,6 +88,8 @@ Route::name('data.')->prefix('data')->group(function () {
             });
             Route::name('search.')->prefix('search')->group(function() {
                 Route::post('/', [SearchController::class, 'search'])->name('search');
+                Route::get('/collections', [SearchController::class, 'collections4'])->name('collections');
+                Route::get('/items', [SearchController::class, 'random6'])->name('items');
             });
         });
     });
