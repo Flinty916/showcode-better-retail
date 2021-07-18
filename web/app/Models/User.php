@@ -53,4 +53,15 @@ class User extends Authenticatable
             $points += $reward->points;
         return $points;
     }
+
+    private function shop() {
+        return $this->hasOne(Shop::class, 'manager_id');
+    }
+
+    public function isManager() {
+        if($this->shop_id)
+            return $this->shop;
+        else
+            return null;
+    }
 }
