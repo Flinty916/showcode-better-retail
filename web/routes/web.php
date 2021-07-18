@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\SearchController;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\Auth\SocialiteController;
@@ -34,16 +35,27 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
+        return Inertia::render('Dashboard', [
+            'isManager' => Auth::user()->isManager(),
+        ]);
     })->name('dashboard');
 
     Route::get('/search', function () {
-        return Inertia::render('Search');
+        return Inertia::render('Search', [
+            'isManager' => Auth::user()->isManager(),
+        ]);
     })->name('search');
 
     Route::get('/profile', function () {
-        return Inertia::render('Profile');
+        return Inertia::render('Profile', [
+            'isManager' => Auth::user()->isManager(),
+        ]);
     })->name('profile');
+    Route::get('/map/manage', function () {
+        return Inertia::render('Map', [
+            'isManager' => Auth::user()->isManager(),
+        ]);
+    })->name('map.manage');
 });
 
 

@@ -54,7 +54,7 @@ class User extends Authenticatable
         return $points;
     }
 
-    private function shop() {
+    public function shop() {
         return $this->hasOne(Shop::class, 'manager_id');
     }
 
