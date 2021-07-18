@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SearchController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -72,6 +73,9 @@ Route::name('data.')->prefix('data')->group(function () {
                 //Add / Remove Items
                 Route::post('/{collection}/add', [NodeItemCollectionController::class, 'addItem'])->name('add');
                 Route::delete('/{collection}/remove', [NodeItemCollectionController::class, 'removeItem'])->name('remove');
+            });
+            Route::name('search.')->prefix('search')->group(function() {
+                Route::post('/', [SearchController::class, 'search'])->name('search');
             });
         });
     });
