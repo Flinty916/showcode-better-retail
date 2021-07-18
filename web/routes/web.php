@@ -4,7 +4,9 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\Auth\SocialiteController;
-
+use App\Http\Controllers\NodeController;
+use App\Http\Controllers\NodeItemController;
+use App\Http\Controllers\NodeItemCollectionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +19,7 @@ use App\Http\Controllers\Auth\SocialiteController;
 */
 
 Route::get('login/{provider}', [SocialiteController::class, 'redirect']);
-Route::get('login/{provider}/callback',[SocialiteController::class, 'callback']);
+Route::get('login/{provider}/callback', [SocialiteController::class, 'callback']);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -42,5 +44,38 @@ Route::middleware('auth')->group(function () {
         return Inertia::render('Profile');
     })->name('profile');
 });
+
+
+Route::name('data.')->prefix('data')->group(function () {
+    Route::name('shop.')->prefix('shop/{shop}')->group(function () {
+        Route::prefix('/{shop}')->group(function() {
+            Route::name('node.')->prefix('node')->group(function () {
+                Route::get('/', [NodeController::class, 'all'])->name('all');
+                Route::get('/{node}', [NodeController::class, 'single'])->name('single');
+                Route::post('/', [NodeController::class, 'create'])->name('create');
+                Route::put('/{node}', [NodeController::class, 'update'])->name('update');
+                Route::delete('/{node}', [NodeController::class, 'delete'])->name('delete');
+            });
+            Route::name('nodeItem.')->prefix('items')->group(function() {
+                Route::get('/', [NodeItemController::class, 'all'])->name('all');
+                Route::get('/{item}', [NodeItemController::class, 'single'])->name('single');
+                Route::post('/', [NodeItemController::class, 'create'])->name('create');
+                Route::put('/{item}', [NodeItemController::class, 'update'])->name('update');
+                Route::delete('/{item}', [NodeItemController::class, 'delete'])->name('delete');
+            });
+            Route::name('nodeItemCollection.')->prefix('collections')->group(function() {
+                Route::get('/', [NodeItemCollectionController::class, 'all'])->name('all');
+                Route::get('/{collection}', [NodeItemCollectionController::class, 'single'])->name('single');
+                Route::post('/', [NodeItemCollectionController::class, 'create'])->name('create');
+                Route::put('/{collection}', [NodeItemCollectionController::class, 'update'])->name('update');
+                Route::delete('/{collection}', [NodeItemCollectionController::class, 'delete'])->name('delete');
+                //Add / Remove Items
+                Route::post('/{collection}/add', [NodeItemCollectionController::class, 'addItem'])->name('add');
+                Route::delete('/{collection}/remove', [NodeItemCollectionController::class, 'removeItem'])->name('remove');
+            });
+        });
+    });
+});
+
 
 require __DIR__ . '/auth.php';
